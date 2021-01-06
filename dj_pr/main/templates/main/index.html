@@ -3,12 +3,19 @@
 
 {% block title %}
 Главная страница
-
 {% endblock %}
 
 {% block content %}
-<h1>Главная страница</h1>
-<p>Тут должен быть какой-то скусный </p>
-<p>текст про нлавную страницу мне даже лень было его</p>
-<p>придумывать</p>
+
+	<h1>Главная страница</h1>
+	{% if tasks %}
+		{% for t in tasks %}
+		<div class="alert alert-secondary">
+			<h3>{{ t.title }}</h3>
+			<p>{{ t.task_text }}</p>
+		</div>
+		{% endfor %}
+	{% else %}
+		<p>У вас нету записей</p>
+	 {% endif %}
 {% endblock %}
