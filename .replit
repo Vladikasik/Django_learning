@@ -1,0 +1,2 @@
+language = "python3"
+run = "python3 dj_pr/manage.py runserver 0.0.0.0:3000"
