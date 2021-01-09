@@ -26,7 +26,7 @@ SECRET_KEY = '2jc#bv$e5mrws==3d7b2wt%$*t1en(df1cf$9%gii2jow=tse9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['9d062aa1-f8c9-4a16-887a-75ad393bce14.id.repl.co', 'https://djangolearning.vladikasik.repl.co']
+ALLOWED_HOSTS = ['127.0.0.1','9d062aa1-f8c9-4a16-887a-75ad393bce14.id.repl.co', 'https://djangolearning.vladikasik.repl.co']
 
 
 # Application definition
