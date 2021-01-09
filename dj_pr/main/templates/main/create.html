@@ -10,9 +10,10 @@
 	<h1>Создать таск</h1>
 	<form method="post">
 		{% csrf_token %}
-		<input type="password" placeholder="Введите название" class="form-control"><br>
-		<textarea placeholder="Введите описание" class="form-control"></textarea><br>
+		{{ form.title }}
+		{{ form.task_text }}
 		<button type="submit" class="btn btn-success">Добавить</button>
+		<span>{{ error }}</span>
 	</form>
 	
 {% endblock %}
