@@ -9,6 +9,6 @@ class Article(models.Model):
 
 
 class Comment(models.Model):
-	parent_article = models.ForeignKey(Article, on_delete = models.CASCADE)
+    parent_article = models.ForeignKey(Article, on_delete=models.CASCADE)
     author_name = models.CharField("Author's name", max_length=50)
-    comment_text = models.CharField('Comment text', ,max_length=300)
+    comment_text = models.CharField('Comment text', max_length=300)
