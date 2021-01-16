@@ -1,3 +1,4 @@
+from django.http import Http404, HttpResponseRedirect
 from django.shortcuts import render
 from .models import Article, Comment
 
@@ -7,4 +8,9 @@ def index(request):
 
 
 def detail(request, article_id):
-	pass
+	try:
+		article = Article.objects.get( id = article_id )
+	except:
+		raise Http404("Статья не найдена )= ")
+
+	return render(request, 'articles/detail.html', {'article': article})
