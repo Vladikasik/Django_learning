@@ -4,6 +4,16 @@
 
 {% block content %}
 
-Какой-то контент
+	{% if articles_list %}
+
+		{% for state in articles_list %}
+
+			<a href="{{}}"> {{state.article_title}} </a>
+
+		{% endfor %}
+
+	{% else %}
+		Статьи не найдены )=
+	{% endif %}
 
 {% endblock %}
